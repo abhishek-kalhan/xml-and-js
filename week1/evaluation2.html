@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation2</title>
+</head>
+<body>
+    <form method="GET" action="">
+        <label for="email">Email *:</label>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="date">Date of Visit: </label>
+        <input type="text" id="date" name="date" placeholder="mm/dd/yyyy"><br><br>
+        <label for="comment">Comment:</label><br>
+        <textarea name="message" id="comment" rows="10" cols="30"></textarea><br>
+        <input type="submit" onclick="displayData()" value="Send your feedback"><br>
+        <span id="feedbackData"></span><br>
+        <span id="feedbackDataEmail"></span><br>
+        <span id="feedbackDataDate"></span><br>
+        <span id="feedbackDataComment"></span><br>
+    </form>
+    <script src="scripts/evaluation2.js"></script>
+</body>
+</html>

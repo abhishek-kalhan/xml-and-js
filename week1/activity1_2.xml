@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<People>
+   <person id="1">
+      <name>Abhishek Kalhan</name>
+      <birthday>27th May 1996</birthday>
+      <hobby1>Coding</hobby1>
+      <hobby2>Listening to Music</hobby2>
+      <hobby3>Watching Movies</hobby3>
+   </person>
+
+   <person id="2">
+        <name> Anu Kalhan </name>​
+        <birthday> 12 December 1969 </birthday>
+        <hobby1> Listening to Music </hobby1>
+        <hobby2> Watching Movies </hobby2>
+   </person>
+
+   <person id="3">
+        <name> Sandeep Kalhan </name>​
+        <birthday> 22 November 1964 </birthday>
+        <hobby1> Watching Movies </hobby1>
+        <hobby2> Reading </hobby2>
+   </person>
+
+   <person id="4">
+        <name> Aditya Kalhan </name>​
+        <birthday> 12 April 1992 </birthday>
+        <hobby1> Working </hobby1>
+   </person>
+
+   <person id="5">
+        <name> Zohaib Faridi </name>​
+        <birthday> 03 May 1996 </birthday>
+        <hobby1> Cycling </hobby1>
+        <hobby2> Reading </hobby2>
+   </person>
+
+   <person id="6">
+        <name> Tanmay Jain </name>​
+        <birthday> 19 June 1996 </birthday>
+        <hobby1> Reading Novels </hobby1>
+   </person>
+
+   <person id="7">
+        <name> Mohd. Hussain </name>​
+        <birthday> 26 October 1995 </birthday>
+        <hobby1> Driving </hobby1>
+   </person>
+
+   <person id="8">
+        <name> Rohan Juyal </name>​
+        <birthday> 27 January 1997 </birthday>
+        <hobby1> Listening to Music </hobby1>
+   </person>
+
+   <person id="9">
+        <name> Eshan Pathak </name>​
+        <birthday> 28 August 1996 </birthday>
+        <hobby1> Working </hobby1>
+   </person>
+
+   <person id="10">
+        <name> Mayank Mahajan </name>​
+        <birthday> 09 April 1996 </birthday>
+        <hobby1> Driving </hobby1>
+   </person>
+</People>
