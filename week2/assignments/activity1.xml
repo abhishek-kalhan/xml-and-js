@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Person>
+    <Name>Joe Martini</Name>
+    <Phone type="home">+1 514 123</Phone>
+    <Phone type="work">+1 514 123</Phone>
+    <Phone type="mobile">+1 514 123</Phone>
+    <Email>joe@joe.com</Email>
+</Person>

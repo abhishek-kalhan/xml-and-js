@@ -1,0 +1,13 @@
+originalName {
+    font-size:x-large;
+  }
+
+  category {
+    display: block;
+    color: red;
+  }
+  
+  oldName {
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+  }
