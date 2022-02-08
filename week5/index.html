@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Activity 5</title>
+		<script language="JavaScript">
+			function formValues(event) {
+				event.preventDefault();
+				const form = event.target;
+				const fname = form.fname.value;
+				const language = form.language.value;
+				const inputElements = form.sport;
+				let favouriteSport= "";
+				for (let i = 0; inputElements[i]; ++i) {
+					if (inputElements[i].checked) {
+						favouriteSport += inputElements[i].value + " ";
+					}
+				}
+				console.log(`Name: ${fname}`);
+				console.log(`Favorite language: ${language}`);
+				console.log(`Favourite Sport: ${favouriteSport}`);
+			}
+		</script>
+	</head>
+	<body>
+		<form onSubmit="formValues(event)" action="" method="get">
+            <h3>Enter your details:</h3>
+			<label for="fname">Enter your name: </label>
+			<input type="text" name="fname" value="" /><br />
+			<p>Favourite Sport:</p>
+			<input type="checkbox" name="sport" id="Cricket" value="Cricket" />
+			<label for="Cricket">Cricket</label>
+			<input type="checkbox" name="sport" id="Football" value="Football" />
+			<label for="Football">Football</label>
+			<input type="checkbox" name="sport" id="Badminton" value="Badminton" />
+			<label for="Badminton">Badminton</label>
+			<br />
+            <p>Favourite Language:</p>
+			<input type="radio" name="language" id="Python" value="Python" />
+			<label for="Python">Python</label>
+            <input type="radio" name="language" id="JavaScript" value="JavaScript" />
+			<label for="JavaScript">JavaScript</label>
+			<input type="radio" name="language" id="Java" value="Java" />
+			<label for="Java">Java</label>
+			<br />
+			<br />
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
