@@ -22,7 +22,6 @@ const htmlToElement = (html) => {
     const lastName = Array.from(item.getElementsByTagName(`lastname`))[0];
     const nickName = Array.from(item.getElementsByTagName(`nickname`))[0];
     const marks = Array.from(item.getElementsByTagName(`marks`))[0];
-    
   
     return `<tr>
         <td>${rollno}</td>
@@ -35,8 +34,6 @@ const htmlToElement = (html) => {
   
   const renderTable = (xmlData) => {
     const table = document.getElementById("table-data");
-  
-  
   
     const nodes = Array.from(xmlData.documentElement.childNodes).filter(
       ({ nodeName }) => nodeName === `student`
