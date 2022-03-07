@@ -1,0 +1,2 @@
+ - I have created the html file (books.html) in which I have created the empty html table that has column for each field and attribute of xml items.
+ - I am dynamically loading data from the xml to the html table using JS.
