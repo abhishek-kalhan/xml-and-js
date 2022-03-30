@@ -1,61 +1,116 @@
-const table = document.getElementById(`generated-content`);
-const fileName = `./people.xml`;
-
-
-
-const loadData = path => new Promise(resolve => {
-const xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = ({ target }) => {
-if (target.readyState == 4 && target.status == 200) {
-resolve(target.response);
-}
-};
-xhttp.open("GET", path, true);
-xhttp.send();
-});
-
-
-
-const isFiltered = (name, term) => !name.toLowerCase().includes(term.toLowerCase());
-
-
-
-const renderTableJS = (data, term) => {
-const htmlString = JSON.parse(data).reduce((prev, current) => {
-const fullName = `${current.first_name} ${current.last_name}`;
-if (term && isFiltered(fullName, term)) return prev;
-
-
-
-return prev + `<tr>
-<td>${current.id}</td>
-<td>${fullName}</td>
-<td>${current.email}</td>
-<td>${current.gender}</td>
-<td>${current.ip_address}</td>
-</tr>`;
-}, "");
-table.innerHTML = htmlString;
-}
-
-
-
-const onSubmit = (event) => {
-event.preventDefault();
-
-
-
-const term = event.target.name.value;
-
-loadData(`./data.json`).then((data) => renderTableJS(data, term));
-};
-
-
-
-const onReset = () => {
-loadData(`./data.json`).then((data) => renderTableJS(data));
-};
-
-
-
-onReset();
+var arr = [
+    {
+    "isActive": false,
+    "balance": "$1,343.69",
+    "name": "Hobbs Macdonald",
+    "registered": "2015-02-08T02:36:36 +05:00",
+    "latitude": -80.356177,
+    "longitude": -125.276756,
+    "friends": [
+    {
+    "id": 0,
+    "name": "Hart Guthrie"
+    },
+    {
+    "id": 1,
+    "name": "Kasey Gomez"
+    }
+    ]
+    },
+    {
+    "isActive": false,
+    "balance": "$2,426.98",
+    "name": "Nelda Sykes",
+    "registered": "2015-02-01T10:16:00 +05:00",
+    "latitude": 72.078718,
+    "longitude": -159.71397,
+    "friends": [
+    {
+    "id": 0,
+    "name": "Sullivan Preston"
+    },
+    {
+    "id": 1,
+    "name": "Mcgee James"
+    }
+    ]
+    },
+    {
+    "isActive": true,
+    "balance": "$1,257.12",
+    "name": "Shaw Walls",
+    "registered": "2018-08-26T02:26:15 +04:00",
+    "latitude": -76.647851,
+    "longitude": 173.881151,
+    "friends": [
+    {
+    "id": 0,
+    "name": "Reyna Wilkins"
+    },
+    {
+    "id": 1,
+    "name": "Deann Christensen"
+    }
+    ]
+    },
+    {
+    "isActive": true,
+    "balance": "$1,431.44",
+    "name": "Boyer Riley",
+    "registered": "2018-09-24T10:12:16 +04:00",
+    "latitude": -60.360275,
+    "longitude": 19.826812,
+    "friends": [
+    {
+    "id": 0,
+    "name": "Steele Coleman"
+    },
+    {
+    "id": 1,
+    "name": "Darcy Dixon"
+    }
+    ]
+    },
+    {
+    "isActive": false,
+    "balance": "$3,038.94",
+    "name": "George Snider",
+    "registered": "2017-09-25T09:12:43 +04:00",
+    "latitude": -67.814834,
+    "longitude": -145.045949,
+    "friends": [
+    {
+    "id": 0,
+    "name": "Irene Rivers"
+    },
+    {
+    "id": 1,
+    "name": "Dora Hart"
+    }
+    ]
+    }
+    ]
+    
+    function check_active(arr) {
+    var active = arr.filter(data => (arr.isActive === true));
+    return active;
+    }
+    
+    function calculateHighestBalance(arr) {
+    var balance = arr.reduce((acc, data) => acc = acc > arr.balance ? acc : arr.balance, 0);
+    return balance;
+    }
+    
+    function getFriends(arr) {
+    var fr_data = arr.map(data => (arr.friends));
+    console.log(fr_data)
+    return fr_data;
+    }
+    
+    function getAccNames(arr) {
+    var name_data = arr.map(arr => (arr.name));
+    let n_data = name_data.toString();
+    console.log(n_data)
+    return n_data;
+    }
+    
