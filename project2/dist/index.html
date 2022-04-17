@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animal Data</title>
+	</head>
+	<body>
+		<form onsubmit="onSubmit(event)" onreset="onReset()">
+			<input type="number" name="id" id="input-id" placeholder="Search by ID" />
+			<input type="text" name="carMake" id="input-car-make" placeholder="Search by car make" />
+			<input type="text" name="carModel" id="input-car-model" placeholder="Search by car model" />
+			<input type="text" name="vin" id="input-car-vin" placeholder="Search by car vin" />
+			<input type="text" name="color" id="input-car-color" placeholder="Search by car color" />
+			<button type="submit">Apply filters</button>
+			<button type="reset">Reset</button>
+		</form> <br>
+		<table border="1">
+			<thead>
+				<th>ID</th>
+				<th>Car Make</th>
+				<th>Car Model</th>
+				<th>Vin</th>
+				<th>color</th>
+			</thead>
+			<tbody id="table-data"></tbody>
+		</table>
+	</body>
+	<script src="./bundle.js"></script>
+</html>
