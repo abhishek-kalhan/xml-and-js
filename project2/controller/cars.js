@@ -12,8 +12,8 @@ const getAll = (data = {}) =>
 		if (data.carModel) {
 			result = result.filter((x) => x.carModel.toLowerCase().includes(data.carModel));
 		}
-		if (data.vin) {
-			result = result.filter((x) => x.vin.toLowerCase().includes(data.vin));
+		if (data.carModelYear) {
+			result = result.filter((x) => x.carModelYear === parseInt(data.carModelYear));
 		}
 		if (data.color) {
 			result = result.filter((x) => x.color.toLowerCase().includes(data.color));

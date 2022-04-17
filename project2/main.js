@@ -10,9 +10,9 @@ const renderTable = (data) => {
 	let source = data;
 
 	const rows = source.reduce(
-		(acc, { id, carMake, carModel, vin, color }) =>
+		(acc, { id, carMake, carModel, carModelYear, color }) =>
 			acc +
-			`<tr id="table-row-${id}"><td>${id}</td><td>${carMake}</td><td>${carModel}</td><td>${vin}</td><td>${color}</td></tr>`,
+			`<tr id="table-row-${id}"><td>${id}</td><td>${carMake}</td><td>${carModel}</td><td>${carModelYear}</td><td>${color}</td></tr>`,
 		``
 	);
 
@@ -29,10 +29,10 @@ window.onSubmit = (event) => {
 	const id = event.target.id.value;
 	const carMake = event.target.carMake.value;
 	const carModel = event.target.carModel.value;
-	const vin = event.target.vin.value;
+	const carModelYear = event.target.carModelYear.value;
 	const color = event.target.color.value;
 
-	getAll({ id, carMake, carModel, vin, color }).then(({ data }) =>
+	getAll({ id, carMake, carModel, carModelYear, color }).then(({ data }) =>
 		renderTable(data)
 	);
 };
